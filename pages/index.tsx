@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-// 硅基流动API密钥（实际开发建议放在.env.local中，这里为演示直接写在代码里）
-const API_KEY = 'sk-irhfhrxjxxvqtmhhsqpgwmxdxuiyftxjxevkhptbluvbncva';
+// 读取环境变量中的 API 密钥（本地用 .env.local，线上用 Vercel 环境变量）
+const API_KEY = process.env.NEXT_PUBLIC_API_KEY as string;
 const API_URL = 'https://api.siliconflow.cn/v1/chat/completions';
 
 // 获取随机吵架开场话术的函数
